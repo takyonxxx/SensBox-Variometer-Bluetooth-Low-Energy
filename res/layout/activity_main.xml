@@ -1,0 +1,288 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dp"
+    android:background="#111111">
+
+   <TextView
+       android:id="@+id/Gpsfix"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentRight="true"
+       android:layout_alignParentTop="true"
+       android:gravity="center"
+       android:padding="5dp"
+       android:text="Satellites:0 Fixed:false"
+       android:textAppearance="?android:attr/textAppearanceMedium"
+       android:textColor="#E5E4E2"
+       android:textSize="18sp"
+       android:textStyle="bold" />
+
+     <TextView
+        android:id="@+id/Wind_Speed_Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Gpsfix"
+        android:text="Wind Speed"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#98AFC7"
+        android:textSize="18sp"
+        android:padding="1dp"
+        android:gravity="center"
+        android:textStyle="bold" />  
+     <TextView
+        android:id="@+id/Wind_Speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Wind_Speed_Txt"
+        android:text="0 km"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#E5E4E2"
+        android:textSize="20sp"
+        android:padding="1dp"
+        android:gravity="center"
+        android:textStyle="bold" />     
+    <TextView
+        android:id="@+id/Altitude_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Gpsfix"
+        android:text="Altitude"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#98AFC7"
+        android:textSize="18sp"
+        android:padding="1dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Altitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Altitude_txt"
+        android:text="0 m"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#E5E4E2"
+        android:textSize="22sp"
+        android:padding="1dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/Distancetakeoff_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Gpsfix"
+        android:text="Distance"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#98AFC7"
+        android:textSize="18sp"
+        android:padding="1dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Distancetakeoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Altitude_txt"
+        android:text="0 m"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#E5E4E2"
+        android:textSize="20sp"
+        android:padding="1dp"
+        android:textStyle="bold" />
+   
+	<TextView
+	    android:id="@+id/Latitudetxt"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+        android:layout_below="@+id/Distancetakeoff"  
+	    android:text="0"
+	    android:textAppearance="?android:attr/textAppearanceMedium"
+	    android:textColor="#FFF380"
+	    android:textSize="16sp"
+	    android:padding="1dp"
+	    android:textStyle="bold" />
+
+      <TextView
+          android:id="@+id/Longitudetxt"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/Latitudetxt"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/Latitudetxt"
+          android:padding="1dp"
+          android:text="0"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="#FFF380"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/Speed_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Altitude"
+        android:text="Speed"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#98AFC7"
+        android:textSize="18sp"
+        android:padding="1dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/Speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Speed_txt"
+        android:text="0 km"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#E5E4E2"
+        android:textSize="20sp"
+        android:padding="1dp"
+        android:textStyle="bold" />
+     <TextView
+        android:id="@+id/Vert_Speed_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Wind_Speed"
+        android:layout_centerHorizontal="true"
+        android:text="Avg Vario"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#98AFC7"
+        android:textSize="18sp"
+        android:padding="1dp"
+        android:textStyle="bold" />
+      <TextView
+        android:id="@+id/Vert_Speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Vert_Speed_txt"
+        android:layout_centerHorizontal="true"
+        android:text="0 m/s"
+        android:padding="1dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FF0000"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+      <TextView
+        android:id="@+id/TempTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Vert_Speed"
+        android:layout_centerHorizontal="true"
+        android:text="0 °C"
+        android:padding="1dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFF380"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+   
+
+    <Button
+        android:id="@+id/exit"
+        style="@style/btnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"       
+        android:text=" EXIT " />
+
+    <Button       
+        android:id="@+id/button_log"
+        style="@style/btnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"        
+        android:text=" Start Log " />
+
+    <Button
+        android:id="@+id/mute"
+        style="@style/btnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text=" Mute " />
+
+      <Button
+        android:id="@+id/volumedec"
+         style="@style/btnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_log"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/volumeinc"
+        android:text="Vol ( - )" />
+    <Button
+        android:id="@+id/volumeinc"
+        style="@style/btnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/volumedec"
+        android:layout_alignParentLeft="true"
+        android:text="Vol ( + )" />
+    <Button
+        android:id="@+id/altdec"
+         style="@style/btnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mute"
+        android:layout_alignLeft="@+id/altinc"
+        android:layout_alignParentRight="true"
+        android:text="Alt ( - )" />
+
+    <Button
+        android:id="@+id/altinc"
+         style="@style/btnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/volumeinc"
+        android:layout_alignBottom="@+id/volumeinc"
+        android:layout_alignParentRight="true"
+        android:text="Alt ( + )" />
+
+      <com.sensboxvariometer.GraphView
+        android:id="@+id/graph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_log"
+        android:layout_alignTop="@+id/volumeinc"
+        android:layout_toLeftOf="@+id/altdec"      
+        android:layout_toRightOf="@+id/volumedec" />
+    <ProgressBar
+        android:id="@+id/climb_progressbar"
+        style="@style/Widget.ProgressBar.Vertical"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/altinc"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Vert_Speed"
+        android:padding="3dp" />
+     <ProgressBar
+         android:id="@+id/sink_progressbar"
+         style="@style/Widget.ProgressBar.OppsVertical"
+         android:layout_width="30dp"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/volumeinc"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/Vert_Speed"
+         android:padding="3dp" />
+
+      <com.sensboxvariometer.gauge_bearing
+          android:id="@+id/gauge_bearing"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/graph"    
+          android:layout_below="@+id/Vert_Speed"    
+          android:layout_toLeftOf="@+id/climb_progressbar"
+          android:layout_toRightOf="@+id/sink_progressbar" />   
+</RelativeLayout>

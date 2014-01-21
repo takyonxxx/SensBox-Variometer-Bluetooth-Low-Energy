@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string-array name="updateInterval">
+        <item name="1">Every 1 second</item>
+        <item name="2">Every 2 seconds</item>
+        <item name="3">Every 3 seconds</item>
+        <item name="4">Every 4 seconds</item>
+        <item name="5">Every 5 seconds</item>
+    </string-array>
+    
+    <string-array name="updateIntervalValues">
+        <item name="1">1000</item>
+        <item name="2">2000</item>
+        <item name="3">3000</item>
+        <item name="4">4000</item>
+        <item name="5">5000</item>
+    </string-array>
+
+     <string-array name="filterupdateInterval">
+        <item name="1">500 ms</item>
+        <item name="2">750 ms</item>
+        <item name="3">1000 ms</item>
+        <item name="4">1250 ms</item>
+        <item name="5">1500 ms</item>
+        <item name="6">1750 ms</item>
+        <item name="7">2000 ms</item>
+    </string-array>
+    
+    <string-array name="filterupdateIntervalValues">
+        <item name="1">500</item>
+        <item name="2">750</item>
+        <item name="3">1000</item>
+        <item name="4">1250</item>
+        <item name="5">1500</item>
+        <item name="6">1750</item>
+        <item name="7">2000</item>
+    </string-array>
+     <string-array name="graphspeedInterval">
+        <item name="1">1</item>
+        <item name="2">2</item>
+        <item name="3">3</item>
+        <item name="4">4</item>
+        <item name="5">5</item>       
+    </string-array>    
+    <string-array name="graphspeedIntervalValues">
+        <item name="1">1</item>
+        <item name="2">2</item>
+        <item name="3">3</item>
+        <item name="4">4</item>
+        <item name="5">5</item>        
+    </string-array>
+     <string-array name="sinkalarm">
+        <item name="1">0.5</item>
+        <item name="2">1</item>
+        <item name="3">1.5</item>
+        <item name="4">2</item>
+        <item name="5">2.5</item>  
+        <item name="6">3</item>      
+        <item name="7">3.5</item>
+        <item name="8">4</item> 
+    </string-array>    
+     <string-array name="sinkalarmValues">
+        <item name="1">0.5</item>
+        <item name="2">1</item>
+        <item name="3">1.5</item>
+        <item name="4">2</item>
+        <item name="5">2.5</item>  
+        <item name="6">3</item>      
+        <item name="7">3.5</item>
+        <item name="8">4</item>
+    </string-array>
+     <string-array name="soundfreq">
+        <item name="1">600 Hz</item>
+         <item name="2">750 Hz</item>
+        <item name="3">1000 Hz</item>        
+    </string-array>    
+     <string-array name="soundfreqValues">
+        <item name="1">1</item>
+        <item name="2">2</item>    
+        <item name="3">3</item>     
+    </string-array>
+</resources>

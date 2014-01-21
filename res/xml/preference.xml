@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Vario Settings"
+        android:key="first_category">        
+        <ListPreference
+            android:key="log_updates_interval"
+            android:title="Log Updates interval"
+            android:summary="Define how often log updates will be in igc"
+            android:defaultValue="3000"
+            android:entries="@array/updateInterval"
+            android:entryValues="@array/updateIntervalValues" />   	
+        <ListPreference
+            android:key="soundfreq"
+            android:title="Lift Sound Frequency"
+            android:summary="Define Lift Sound Frequency Hz"
+            android:defaultValue="2"
+            android:entries="@array/soundfreq"
+            android:entryValues="@array/soundfreqValues" />   	
+        <ListPreference
+            android:key="sink_alarm"
+            android:title="Sink alarm start point"
+            android:summary="Define Sink alarm start point"
+            android:defaultValue="1.5"
+            android:entries="@array/sinkalarm"
+            android:entryValues="@array/sinkalarmValues" />          
+        <ListPreference
+            android:key="graphspeed_interval"
+            android:title="Graph Speed"
+            android:summary="Define speed of altitude graph"
+            android:defaultValue="1"
+            android:entries="@array/graphspeedInterval"
+            android:entryValues="@array/graphspeedIntervalValues" />   
+        
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Pilot Info"
+        android:key="second_category">
+        <EditTextPreference
+            android:key="pilotname"
+            android:title="Pilot Name"
+            android:summary="Define Pilot Name"     
+            android:defaultValue="" />
+         <EditTextPreference
+            android:key="glidermodel"
+            android:title="Glider Name-Model"
+            android:summary="Define Glider Name-Model"     
+            android:defaultValue="" />
+          <EditTextPreference
+            android:key="glidercertf"
+            android:title="Glider Certificate"
+            android:summary="Define Glider Certificate"     
+            android:defaultValue="" />
+          <EditTextPreference
+            android:key="pilotid"
+            android:title="Pilot ID"
+            android:summary="Define Pilot ID"          
+            android:defaultValue="" />
+           <EditTextPreference
+            android:key="compid"
+            android:title="Competition ID"
+            android:summary="Define Competition ID"           
+            android:defaultValue="" />
+          
+    </PreferenceCategory>
+</PreferenceScreen>
