@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Sensbox Variometer</string> 
+    <string name="app_name">SensBox Variometer</string> 
     <string name="menu_settings">SETTINGS</string>
     <string name="exit_title">EXIT</string>
     <string name="preferences_dumpLevel">Filter Dump level</string> 

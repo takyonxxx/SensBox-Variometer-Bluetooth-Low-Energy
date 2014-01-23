@@ -59,7 +59,7 @@ public class MainActivity extends Activity {
 	private TextView AltitudeTxt,TempTxt,GpsSpeedTxt,VertSpeedTxt,GpsfixTxt,LatitudeTxt,LongitudeTxt,WindTxt,Distancetotakeoff;
 	private ArrayList<String> FlightValues=null;		
 	private ProgressBar climbProgress,sinkProgress;		
-	private Button exit,startlog,altinc,altdec,mute,volumedec,volumeinc;
+	private Button exit,startlog,altinc,altdec,mute,volumedec,volumeinc,settings;
 	private double pressure=0,baroaltitude=0,dblLatitude,dblLongitude,dbltakeoffLatitude,
 			dbltakeoffLongitude,sinkalarm=1, dbvario=0,dtemp=0;
 	private int interval=250,gpsfix=0,gpsalt=0,speed=0,heading=0;
@@ -104,7 +104,7 @@ public class MainActivity extends Activity {
 		volumedec= (Button) findViewById(R.id.volumedec);					
 		exit= (Button) findViewById(R.id.exit);	
 		mute= (Button) findViewById(R.id.mute);	
-						
+		settings= (Button) findViewById(R.id.btn_settings);					
 		compass = (gauge_bearing) findViewById(R.id.gauge_bearing);
 		mGraphView = (GraphView) findViewById(R.id.graph);	
 		FlightValues = new ArrayList<String>();  
@@ -274,7 +274,21 @@ public class MainActivity extends Activity {
             	}
 			}
 		});	
+       settings.setOnClickListener(new View.OnClickListener() {
 			
+			@Override
+			public void onClick(View arg0) {	
+				if(!logging)
+	        	{
+		        	Intent i = new Intent(getApplicationContext(),Prefs.class); 
+		        	i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		        	startActivity(i);	
+	        	}else
+	        	{	       		
+	        	 Toast.makeText(MainActivity.this, "You can not enter settings while logging! Firstly stop logging.", Toast.LENGTH_LONG).show();	        	 
+	        	}				
+			}
+		});			
 	}
 	 private void init()
 	   {		   	  
@@ -527,7 +541,7 @@ public class MainActivity extends Activity {
     {
          String gpsString;
          switch (gpsfix) {
-             case 0:  gpsString = "no fix";
+             case 0:  gpsString = "No fix";
                       break;
              case 1:  gpsString = "2D fix";
                       break;
@@ -537,7 +551,7 @@ public class MainActivity extends Activity {
                       break;
              case 4:  gpsString = "3D + DPGS";
                       break;             
-             default: gpsString = "no fix";
+             default: gpsString = "No fix";
                       break;
          }
 		return gpsString;    	

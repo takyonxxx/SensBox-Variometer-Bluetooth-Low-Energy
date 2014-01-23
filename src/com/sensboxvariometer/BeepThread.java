@@ -39,7 +39,8 @@ public class BeepThread implements Runnable, SoundPool.OnLoadCompleteListener {
     public void stop() {
         this.beepOn=false;       
     }
-    public void start(Context context,int soundtype,double newsinkalarm) {    	
+    public void start(Context context,int soundtype,double newsinkalarm) { 
+    	try {
         sinkalarm=newsinkalarm;
     	if(soundtype==1)
         	temp=R.raw.tone_600mhz;
@@ -49,7 +50,8 @@ public class BeepThread implements Runnable, SoundPool.OnLoadCompleteListener {
         	temp=R.raw.tone_1000mhz;
         tone = soundPool.load(context, temp, 1);
         sink = soundPool.load(context, R.raw.sink_tone500mhz, 1);
-        this.beepOn=true;       
+        this.beepOn=true;  
+    	  } catch (Exception e) {}
     }
     public void setAvgVario(double newavgvario) {
     	this.avgvario = newavgvario;    	
@@ -72,8 +74,7 @@ public class BeepThread implements Runnable, SoundPool.OnLoadCompleteListener {
                 		Thread.sleep((int) (200));
                 	}
                 }
-            } catch (InterruptedException e) {
-                soundPool.stop(tone_stream);
+            } catch (Exception e) {                
             }            
         }
         soundPool.stop(tone_stream);
@@ -83,10 +84,8 @@ public class BeepThread implements Runnable, SoundPool.OnLoadCompleteListener {
     }
 
     public synchronized void setRunning(boolean running) {
-        this.running = running;
-        if (beepOn) {
-            thread.interrupt();
-        }
+        this.running = running;    
+        this.beepOn=false;
     }   
     public float getRateFromTone1000(double var) {
         double hZ = base + increment * var;
@@ -132,9 +131,11 @@ public class BeepThread implements Runnable, SoundPool.OnLoadCompleteListener {
     }
 
     public void onDestroy() {
-        this.setRunning(false);
+    	try{
+        this.setRunning(false);           
         thread.stop();
         thread = null;
+    	}catch(Exception e){};
     }
     
 

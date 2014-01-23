@@ -186,39 +186,45 @@
         android:textStyle="bold" />
    
 
-    <Button
-        android:id="@+id/exit"
+       <LinearLayout 
+    android:id="@+id/LinearLayoutButton" 
+    android:layout_height="wrap_content" 
+    android:layout_width="fill_parent" 
+    android:orientation="horizontal"    
+    android:layout_alignParentBottom="true">
+       <Button
+        android:id="@+id/btn_settings"
         style="@style/btnStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"       
-        android:text=" EXIT " />
+        android:layout_height="wrap_content"        
+        android:text=" Settings " />  
 
     <Button       
         android:id="@+id/button_log"
         style="@style/btnStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"        
-        android:text=" Start Log " />
-
+        android:layout_height="wrap_content"        
+        android:text=" Start Log " />   
     <Button
         android:id="@+id/mute"
         style="@style/btnStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text=" Mute " />
+        android:layout_height="wrap_content"       
+        android:text=" Mute " /> 
+    <Button
+        android:id="@+id/exit"
+        style="@style/btnStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"       
+        android:text=" Exit " />      
+   </LinearLayout>
 
       <Button
         android:id="@+id/volumedec"
          style="@style/btnStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button_log"
+        android:layout_above="@+id/LinearLayoutButton"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@+id/volumeinc"
         android:text="Vol ( - )" />
@@ -235,7 +241,7 @@
          style="@style/btnStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/mute"
+        android:layout_above="@+id/LinearLayoutButton"
         android:layout_alignLeft="@+id/altinc"
         android:layout_alignParentRight="true"
         android:text="Alt ( - )" />
@@ -254,7 +260,7 @@
         android:id="@+id/graph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button_log"
+        android:layout_above="@+id/LinearLayoutButton"
         android:layout_alignTop="@+id/volumeinc"
         android:layout_toLeftOf="@+id/altdec"      
         android:layout_toRightOf="@+id/volumedec" />
